@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/tab_home_select"
+            android:title="首页" />
+        <item
+            android:id="@+id/category"
+            android:icon="@drawable/tab_category_select"
+            android:title="分类" />
+        <item
+            android:id="@+id/deal"
+            android:icon="@drawable/tab_deal_select"
+            android:title="积分兑换" />
+        <item
+            android:id="@+id/special"
+            android:icon="@drawable/tab_special_select"
+            android:title="易购专区" />
+        <item
+            android:id="@+id/person"
+            android:icon="@drawable/tab_person_select"
+            android:title="个人中心" />
+    </group>
+</menu>

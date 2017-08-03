@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/backup"
+        android:icon="@drawable/ic_back"
+        android:title="back"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/delete"
+        android:icon="@drawable/close_white_icon"
+        android:title="delete"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/setting"
+        android:icon="@drawable/person_setting"
+        android:title="setting"
+        app:showAsAction="ifRoom"/>
+</menu>
