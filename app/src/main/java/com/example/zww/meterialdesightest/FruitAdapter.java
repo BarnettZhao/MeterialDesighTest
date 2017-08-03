@@ -1,6 +1,7 @@
 package com.example.zww.meterialdesightest;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,12 +27,24 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, final int viewType) {
         if (context == null) {
             context = parent.getContext();
         }
         View view = LayoutInflater.from(context).inflate(R.layout.item_fruit, parent, false);
-        return new ViewHolder(view);
+        final ViewHolder viewHolder = new ViewHolder(view);
+        viewHolder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = viewHolder.getAdapterPosition();
+                Fruit fruit = mDatas.get(position);
+                Intent intent = new Intent(context,FruitActivity.class);
+                intent.putExtra(FruitActivity.FRUIT_NAME,fruit.getName());
+                intent.putExtra(FruitActivity.FRUIT_IMAGE_ID,fruit.getImageId());
+                context.startActivity(intent);
+            }
+        });
+        return viewHolder;
     }
 
     @Override
