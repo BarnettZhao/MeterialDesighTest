@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".FruitActivity"
+            android:theme="@style/FruitActivityTheme"
             android:screenOrientation="portrait"/>
     </application>
 
